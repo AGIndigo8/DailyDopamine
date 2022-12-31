@@ -15,8 +15,9 @@ class MainActivity : AppCompatActivity() {
         task.name = "Task 1"
         task.description = "This is a description"
         supportFragmentManager.commit{
-            add(R.id.contentLayout, TaskCardFrag.newInstance(task))
-            add(R.id.contentLayout, TaskCardFrag.newInstance(task))
+            for (i in 0..3) {
+                add(R.id.taskLayout, TaskCardFrag.newInstance(task))
+            }
         }
     }
 }

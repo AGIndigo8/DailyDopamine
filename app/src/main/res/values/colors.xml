@@ -5,6 +5,7 @@
     <color name="vitals">#b3fff5</color>
     <color name="vitalsFont">#1d8dbb</color>
     <color name="cardBackground">#feffea</color>
+    <color name="taskNameFont">#4d2e8e</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
