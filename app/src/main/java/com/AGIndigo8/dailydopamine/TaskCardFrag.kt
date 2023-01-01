@@ -10,7 +10,7 @@ import android.widget.TextView
 class TaskCardFrag : Fragment() {
     private var task: Task = Task()
     private lateinit var taskName : TextView
-    private lateinit var taskDescription : TextView
+    private lateinit var points : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,9 +30,9 @@ class TaskCardFrag : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         taskName = view.findViewById(R.id.taskName)
         taskName.text = task.name
-        taskDescription = view.findViewById(R.id.taskDescription)
-        taskDescription.text = task.description
-
+        points = view.findViewById(R.id.points)
+        var pointsString  = getString(R.string.dopamine_level, task.todaysPoints)
+        points.text = pointsString
     }
 
     companion object {
