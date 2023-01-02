@@ -15,16 +15,19 @@ class MainActivity : AppCompatActivity() {
         setupAddTaskButton()
     }
 
-    fun setupAddTaskButton(){
+    fun setupAddTaskButton() {
         val addTaskButton: Button = findViewById(R.id.addTaskButton)
+
         addTaskButton.setOnClickListener {
-            numTasks++
             val task = Task()
-            task.name = "Task" + numTasks
+            task.name = "Task" + TaskManager.getTaskCount()
             task.description = "This is a description"
-            supportFragmentManager.commit{
-                add(R.id.contentLayout, TaskCardFrag.newInstance(task))
+            TaskManager.addTask(task)
+            val taskCardFrag = TaskCardFrag.newInstance(task)
+            supportFragmentManager.commit {
+                add(R.id.contentLayout, taskCardFrag)
             }
         }
     }
+
 }
