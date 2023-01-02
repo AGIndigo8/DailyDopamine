@@ -71,6 +71,11 @@ object TaskManager {
         modification(tasks[index])
         notifySubscribers(MODIFY)
     }
+
+    fun modifyTask(task: Task, modification : (Task) -> Unit){
+        modification(task)
+        notifySubscribers(MODIFY)
+    }
 }
 
 enum class EventType {
