@@ -13,6 +13,7 @@
     <color name="newTask_descriptionInput">#1d3647</color>
     <color name="newTask_minTitle">#4b5d70</color>
     <color name="newTask_minInput">#4c5b6e</color>
+    <color name="newTask_addButton">#2aee60</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
