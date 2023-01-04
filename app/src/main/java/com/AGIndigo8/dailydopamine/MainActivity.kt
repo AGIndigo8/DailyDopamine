@@ -1,5 +1,6 @@
 package com.AGIndigo8.dailydopamine
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -13,6 +14,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setupAddTaskButton()
+        val intent = Intent(this, NewTask::class.java)
+        startActivity(intent)
     }
 
     fun setupAddTaskButton() {
