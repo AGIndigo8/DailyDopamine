@@ -14,19 +14,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setupAddTaskButton()
-        val intent = Intent(this, NewTask::class.java)
-        startActivity(intent)
     }
 
     fun setupAddTaskButton() {
         val addTaskButton: Button = findViewById(R.id.addTaskButton)
 
         addTaskButton.setOnClickListener {
-            val task = Task()
-            task.name = "Task" + TaskManager.getTaskCount()
-            task.description = "This is a description"
-            TaskManager.addTask(task)
-            val taskCardFrag = TaskCardFrag.newInstance(task)
+            val intent = Intent(this, NewTask::class.java)
+            startActivity(intent)
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val contentLayout: LinearLayout = findViewById(R.id.contentLayout)
+        contentLayout.removeAllViews()
+        TaskManager.getUserTasks().forEach {
+            val taskCardFrag = TaskCardFrag.newInstance(it)
             supportFragmentManager.commit {
                 add(R.id.contentLayout, taskCardFrag)
             }
