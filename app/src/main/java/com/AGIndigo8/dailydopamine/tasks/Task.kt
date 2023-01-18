@@ -1,4 +1,4 @@
-package com.AGIndigo8.dailydopamine
+package com.AGIndigo8.dailydopamine.tasks
 
 import java.io.Serializable
 

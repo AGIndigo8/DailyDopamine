@@ -1,6 +1,7 @@
 package com.AGIndigo8.dailydopamine
 
 import android.widget.EditText
+import com.AGIndigo8.dailydopamine.tasks.Task
 
 
 data class ComponentToTask (
