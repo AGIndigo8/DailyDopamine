@@ -1,4 +1,4 @@
-package com.AGIndigo8.dailydopamine
+package com.AGIndigo8.dailydopamine.ui.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,9 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.LinearLayout
 import androidx.fragment.app.commit
-import androidx.compose.runtime.Composable
+import com.AGIndigo8.dailydopamine.ui.newTask.NewTask
+import com.AGIndigo8.dailydopamine.R
+import com.AGIndigo8.dailydopamine.TaskManager
 
 class MainActivity : AppCompatActivity() {
     var numTasks = 0

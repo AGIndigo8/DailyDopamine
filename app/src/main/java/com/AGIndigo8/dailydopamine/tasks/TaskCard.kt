@@ -1,8 +1,5 @@
 package com.AGIndigo8.dailydopamine
 
-import android.content.Context
-import android.graphics.BitmapFactory
-import android.widget.LinearLayout
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
@@ -15,7 +12,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.material.Icon
-import androidx.core.content.ContextCompat
+import com.AGIndigo8.dailydopamine.tasks.Task
 
 @Composable
 fun TaskCard(task: Task) {

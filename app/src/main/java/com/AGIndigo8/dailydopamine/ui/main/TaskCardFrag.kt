@@ -1,4 +1,4 @@
-package com.AGIndigo8.dailydopamine
+package com.AGIndigo8.dailydopamine.ui.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import com.AGIndigo8.dailydopamine.EventType
+import com.AGIndigo8.dailydopamine.R
+import com.AGIndigo8.dailydopamine.tasks.Task
+import com.AGIndigo8.dailydopamine.TaskManager
 
 class TaskCardFrag : Fragment() {
     private var task: Task = Task()
@@ -50,7 +54,7 @@ class TaskCardFrag : Fragment() {
         points.text = pointsString
 
         TaskManager.subscribe(EventType.MODIFY) {
-            pointsString  = getString(R.string.dopamine_level, task.todaysPoints)
+            pointsString = getString(R.string.dopamine_level, task.todaysPoints)
             points.text = pointsString
         }
     }
@@ -59,7 +63,7 @@ class TaskCardFrag : Fragment() {
         addButton = view.findViewById(R.id.addButton)
 
         addButton.setOnClickListener {
-            TaskManager.modifyTask(task){
+            TaskManager.modifyTask(task) {
                 it.incrementPoints()
             }
         }
@@ -73,7 +77,7 @@ class TaskCardFrag : Fragment() {
         minusButton = view.findViewById(R.id.minusButton)
         
         minusButton.setOnClickListener {
-            TaskManager.modifyTask(task){
+            TaskManager.modifyTask(task) {
                 it.decrementPoints()
             }
         }

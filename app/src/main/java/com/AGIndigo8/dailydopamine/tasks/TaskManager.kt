@@ -1,5 +1,7 @@
 package com.AGIndigo8.dailydopamine
 
+import com.AGIndigo8.dailydopamine.tasks.Task
+
 object TaskManager {
     private val ADD = EventType.ADD
     private val REMOVE = EventType.REMOVE

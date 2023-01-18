@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/newTaskBackground"
-    tools:context=".NewTask">
+    tools:context=".ui.newTask.NewTask">
 
     <LinearLayout
         android:id="@+id/linearLayout"
